@@ -1,0 +1,84 @@
+<!--
+  Repository hero for qiita-blog.
+  Self-contained SVG for use at the top of a GitHub README.
+-->
+<svg width="100%" viewBox="0 0 900 280" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="hero-title hero-desc">
+<title id="hero-title">qiita-blog — Zenn articles, mirrored to Qiita</title>
+<desc id="hero-desc">A left-to-right pipeline in which a Markdown article is converted after a waiting period, stored as public and image files, and published through a command-line tool.</desc>
+<style>
+  .ts    { font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif; font-size: 13px; fill: #5F5E5A; }
+  .tl    { font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif; font-size: 12px; font-weight: 600; fill: #534AB7; letter-spacing: 2px; }
+  .title { font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif; font-size: 34px; font-weight: 600; fill: #2C2C2A; }
+  .node  { font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif; font-size: 12.5px; font-weight: 600; fill: #2C2C2A; text-anchor: middle; }
+  .sub   { font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif; font-size: 10.5px; fill: #5F5E5A; text-anchor: middle; }
+  .gray-fill   { fill: #F1EFE8; stroke: #5F5E5A; stroke-width: 0.8; }
+  .purple-fill { fill: #EEEDFE; stroke: #534AB7; stroke-width: 0.8; }
+  .teal-fill   { fill: #E1F5EE; stroke: #0F6E56; stroke-width: 0.8; }
+  .icon-gray   { fill: none; stroke: #5F5E5A; stroke-width: 1.4; stroke-linecap: round; stroke-linejoin: round; }
+  .icon-purple { fill: none; stroke: #534AB7; stroke-width: 1.4; stroke-linecap: round; stroke-linejoin: round; }
+  .icon-teal   { fill: none; stroke: #0F6E56; stroke-width: 1.4; stroke-linecap: round; stroke-linejoin: round; }
+  .arr         { stroke: #5F5E5A; stroke-width: 1.5; fill: none; }
+  .arrow-tip   { fill: none; stroke: #5F5E5A; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+  @media (prefers-color-scheme: dark) {
+    .ts    { fill: #C7C5BD; }
+    .tl    { fill: #AFA9EC; }
+    .title { fill: #E5E5E2; }
+    .node  { fill: #E5E5E2; }
+    .sub   { fill: #C7C5BD; }
+    .gray-fill   { fill: #444441; stroke: #B4B2A9; }
+    .purple-fill { fill: #3C3489; stroke: #AFA9EC; }
+    .teal-fill   { fill: #085041; stroke: #5DCAA5; }
+    .icon-gray   { stroke: #B4B2A9; }
+    .icon-purple { stroke: #AFA9EC; }
+    .icon-teal   { stroke: #5DCAA5; }
+    .arr         { stroke: #B4B2A9; }
+    .arrow-tip   { stroke: #B4B2A9; }
+  }
+</style>
+<defs>
+  <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+    <path class="arrow-tip" d="M2 1L8 5L2 9"/>
+  </marker>
+</defs>
+
+<!-- Title block -->
+<text class="tl" x="44" y="52">ARTICLE MIRROR PIPELINE</text>
+<text class="title" x="42" y="91">qiita-blog</text>
+<text class="ts" x="44" y="118">Zenn articles, mirrored to Qiita</text>
+
+<!-- Connectors are drawn before nodes so their ends meet the node borders cleanly. -->
+<path class="arr" d="M172 184H196" marker-end="url(#arrow)"/>
+<path class="arr" d="M356 184H380" marker-end="url(#arrow)"/>
+<path class="arr" d="M555 184H579" marker-end="url(#arrow)"/>
+<path class="arr" d="M714 184H738" marker-end="url(#arrow)"/>
+
+<!-- Stage 1: source article -->
+<rect class="gray-fill" x="42" y="146" width="130" height="76" rx="8"/>
+<path class="icon-gray" d="M58 158H70L76 164V184H58Z M70 158V164H76 M62 170H72 M62 175H72"/>
+<text class="node" x="119" y="176">Zenn article</text>
+<text class="sub" x="119" y="196">Markdown</text>
+
+<!-- Stage 2: conversion and delayed release -->
+<rect class="purple-fill" x="196" y="146" width="160" height="76" rx="8"/>
+<path class="icon-purple" d="M211 166H225 M221 162L225 166L221 170 M225 181H211 M215 177L211 181L215 185 M233 162V185"/>
+<text class="node" x="291" y="176">zenn-tools qiita</text>
+<text class="sub" x="291" y="196">convert · wait N days</text>
+
+<!-- Stage 3: mirror repository -->
+<rect class="teal-fill" x="380" y="146" width="175" height="76" rx="8"/>
+<path class="icon-teal" d="M395 163H405L409 168H425V186H395Z M395 168H425"/>
+<text class="node" x="484" y="176">qiita-blog repo</text>
+<text class="sub" x="484" y="196">public/ + images/</text>
+
+<!-- Stage 4: command-line publication -->
+<rect class="gray-fill" x="579" y="146" width="135" height="76" rx="8"/>
+<path class="icon-gray" d="M594 161H618V187H594Z M599 169L603 173L599 177 M607 178H613"/>
+<text class="node" x="665" y="176">Qiita CLI</text>
+<text class="sub" x="665" y="196">publish</text>
+
+<!-- Stage 5: destination -->
+<rect class="gray-fill" x="738" y="146" width="120" height="76" rx="8"/>
+<path class="icon-gray" d="M754 163H766L772 169V186H754Z M766 163V169H772 M758 175H768 M758 180H766"/>
+<text class="node" x="815" y="176">Qiita</text>
+<text class="sub" x="815" y="196">published</text>
+</svg>
